@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF53786B262752020039108D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53786A262752020039108D /* AppDelegate.swift */; };
+		CF53786D262752030039108D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF53786C262752030039108D /* Assets.xcassets */; };
+		CF537870262752030039108D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF53786E262752030039108D /* MainMenu.xib */; };
+		CF53787C262752040039108D /* QuickBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53787B262752040039108D /* QuickBarTests.swift */; };
+		CF537887262752040039108D /* QuickBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF537886262752040039108D /* QuickBarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF537878262752040039108D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF53785F262752020039108D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF537866262752020039108D;
+			remoteInfo = QuickBar;
+		};
+		CF537883262752040039108D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF53785F262752020039108D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF537866262752020039108D;
+			remoteInfo = QuickBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF537867262752020039108D /* QuickBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF53786A262752020039108D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF53786C262752030039108D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF53786F262752030039108D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CF537871262752030039108D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF537872262752030039108D /* QuickBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuickBar.entitlements; sourceTree = "<group>"; };
+		CF537877262752040039108D /* QuickBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF53787B262752040039108D /* QuickBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBarTests.swift; sourceTree = "<group>"; };
+		CF53787D262752040039108D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF537882262752040039108D /* QuickBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF537886262752040039108D /* QuickBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBarUITests.swift; sourceTree = "<group>"; };
+		CF537888262752040039108D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF537864262752020039108D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF537874262752040039108D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF53787F262752040039108D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF53785E262752020039108D = {
+			isa = PBXGroup;
+			children = (
+				CF537869262752020039108D /* QuickBar */,
+				CF53787A262752040039108D /* QuickBarTests */,
+				CF537885262752040039108D /* QuickBarUITests */,
+				CF537868262752020039108D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF537868262752020039108D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF537867262752020039108D /* QuickBar.app */,
+				CF537877262752040039108D /* QuickBarTests.xctest */,
+				CF537882262752040039108D /* QuickBarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF537869262752020039108D /* QuickBar */ = {
+			isa = PBXGroup;
+			children = (
+				CF53786A262752020039108D /* AppDelegate.swift */,
+				CF53786C262752030039108D /* Assets.xcassets */,
+				CF53786E262752030039108D /* MainMenu.xib */,
+				CF537871262752030039108D /* Info.plist */,
+				CF537872262752030039108D /* QuickBar.entitlements */,
+			);
+			path = QuickBar;
+			sourceTree = "<group>";
+		};
+		CF53787A262752040039108D /* QuickBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF53787B262752040039108D /* QuickBarTests.swift */,
+				CF53787D262752040039108D /* Info.plist */,
+			);
+			path = QuickBarTests;
+			sourceTree = "<group>";
+		};
+		CF537885262752040039108D /* QuickBarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF537886262752040039108D /* QuickBarUITests.swift */,
+				CF537888262752040039108D /* Info.plist */,
+			);
+			path = QuickBarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF537866262752020039108D /* QuickBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF53788B262752040039108D /* Build configuration list for PBXNativeTarget "QuickBar" */;
+			buildPhases = (
+				CF537863262752020039108D /* Sources */,
+				CF537864262752020039108D /* Frameworks */,
+				CF537865262752020039108D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickBar;
+			productName = QuickBar;
+			productReference = CF537867262752020039108D /* QuickBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF537876262752040039108D /* QuickBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF53788E262752040039108D /* Build configuration list for PBXNativeTarget "QuickBarTests" */;
+			buildPhases = (
+				CF537873262752040039108D /* Sources */,
+				CF537874262752040039108D /* Frameworks */,
+				CF537875262752040039108D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF537879262752040039108D /* PBXTargetDependency */,
+			);
+			name = QuickBarTests;
+			productName = QuickBarTests;
+			productReference = CF537877262752040039108D /* QuickBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF537881262752040039108D /* QuickBarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF537891262752040039108D /* Build configuration list for PBXNativeTarget "QuickBarUITests" */;
+			buildPhases = (
+				CF53787E262752040039108D /* Sources */,
+				CF53787F262752040039108D /* Frameworks */,
+				CF537880262752040039108D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF537884262752040039108D /* PBXTargetDependency */,
+			);
+			name = QuickBarUITests;
+			productName = QuickBarUITests;
+			productReference = CF537882262752040039108D /* QuickBarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF53785F262752020039108D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					CF537866262752020039108D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					CF537876262752040039108D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF537866262752020039108D;
+					};
+					CF537881262752040039108D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = CF537866262752020039108D;
+					};
+				};
+			};
+			buildConfigurationList = CF537862262752020039108D /* Build configuration list for PBXProject "QuickBar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF53785E262752020039108D;
+			productRefGroup = CF537868262752020039108D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF537866262752020039108D /* QuickBar */,
+				CF537876262752040039108D /* QuickBarTests */,
+				CF537881262752040039108D /* QuickBarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF537865262752020039108D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF53786D262752030039108D /* Assets.xcassets in Resources */,
+				CF537870262752030039108D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF537875262752040039108D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF537880262752040039108D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF537863262752020039108D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF53786B262752020039108D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF537873262752040039108D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF53787C262752040039108D /* QuickBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF53787E262752040039108D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF537887262752040039108D /* QuickBarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF537879262752040039108D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF537866262752020039108D /* QuickBar */;
+			targetProxy = CF537878262752040039108D /* PBXContainerItemProxy */;
+		};
+		CF537884262752040039108D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF537866262752020039108D /* QuickBar */;
+			targetProxy = CF537883262752040039108D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF53786E262752030039108D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF53786F262752030039108D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF537889262752040039108D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF53788A262752040039108D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CF53788C262752040039108D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = QuickBar/QuickBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B29PGN9AG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = QuickBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.QuickBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CF53788D262752040039108D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = QuickBar/QuickBar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B29PGN9AG4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = QuickBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.QuickBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CF53788F262752040039108D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B29PGN9AG4;
+				INFOPLIST_FILE = QuickBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.QuickBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickBar.app/Contents/MacOS/QuickBar";
+			};
+			name = Debug;
+		};
+		CF537890262752040039108D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B29PGN9AG4;
+				INFOPLIST_FILE = QuickBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.QuickBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickBar.app/Contents/MacOS/QuickBar";
+			};
+			name = Release;
+		};
+		CF537892262752040039108D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B29PGN9AG4;
+				INFOPLIST_FILE = QuickBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.QuickBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = QuickBar;
+			};
+			name = Debug;
+		};
+		CF537893262752040039108D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = B29PGN9AG4;
+				INFOPLIST_FILE = QuickBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ashwin.QuickBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = QuickBar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF537862262752020039108D /* Build configuration list for PBXProject "QuickBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF537889262752040039108D /* Debug */,
+				CF53788A262752040039108D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF53788B262752040039108D /* Build configuration list for PBXNativeTarget "QuickBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF53788C262752040039108D /* Debug */,
+				CF53788D262752040039108D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF53788E262752040039108D /* Build configuration list for PBXNativeTarget "QuickBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF53788F262752040039108D /* Debug */,
+				CF537890262752040039108D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF537891262752040039108D /* Build configuration list for PBXNativeTarget "QuickBarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF537892262752040039108D /* Debug */,
+				CF537893262752040039108D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF53785F262752020039108D /* Project object */;
+}
