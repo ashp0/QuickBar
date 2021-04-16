@@ -10,10 +10,12 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet var window: NSWindow!
+   let window = DockWindowController()
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+
+        window.showWindow(nil)
         // Insert code here to initialize your application
     }
 
@@ -23,4 +25,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
+
 

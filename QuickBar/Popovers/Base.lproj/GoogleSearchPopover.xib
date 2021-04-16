@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GoogleSearchPopover" customModule="QuickBar" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="z7O-LQ-iIm"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wRW-FJ-kX1">
+                    <rect key="frame" x="5" y="5" width="470" height="30"/>
+                    <textFieldCell key="cell" controlSize="large" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Enter Search" usesSingleLineMode="YES" bezelStyle="round" id="ue5-ya-EmU">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="searchEnterPressed:" target="-2" id="RDl-eC-Anl"/>
+                    </connections>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-nc-kzi">
+                    <rect key="frame" x="5" y="-3.5" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="rX2-L8-odp"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wRW-FJ-kX1" secondAttribute="trailing" constant="5" id="EY0-hn-xjs"/>
+                <constraint firstItem="wRW-FJ-kX1" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="LTT-a6-hPF"/>
+                <constraint firstItem="wRW-FJ-kX1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="RYx-sw-2bh"/>
+                <constraint firstAttribute="bottom" secondItem="wRW-FJ-kX1" secondAttribute="bottom" constant="5" id="XMq-0A-bfS"/>
+            </constraints>
+            <point key="canvasLocation" x="4" y="120"/>
+        </customView>
+    </objects>
+</document>

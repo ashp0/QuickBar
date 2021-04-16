@@ -12,6 +12,30 @@
 		CF537870262752030039108D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF53786E262752030039108D /* MainMenu.xib */; };
 		CF53787C262752040039108D /* QuickBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF53787B262752040039108D /* QuickBarTests.swift */; };
 		CF537887262752040039108D /* QuickBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF537886262752040039108D /* QuickBarUITests.swift */; };
+		CF537899262756130039108D /* DockWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF537897262756130039108D /* DockWindowController.swift */; };
+		CF53789A262756130039108D /* DockWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF537898262756130039108D /* DockWindowController.xib */; };
+		CF5378AB26275A1F0039108D /* CollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5378A726275A1E0039108D /* CollectionViewItem.swift */; };
+		CF5378AC26275A1F0039108D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5378A826275A1E0039108D /* CollectionViewController.swift */; };
+		CF5378AD26275A1F0039108D /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5378A926275A1E0039108D /* CollectionViewController.xib */; };
+		CF5378AE26275A1F0039108D /* CollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF5378AA26275A1F0039108D /* CollectionViewItem.xib */; };
+		CF677C722628A8A600CC2C68 /* GoogleSearchPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF677C742628A8A600CC2C68 /* GoogleSearchPopover.xib */; };
+		CF677C792628AB2100CC2C68 /* HoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF677C782628AB2100CC2C68 /* HoverButton.swift */; };
+		CF677C7E2628ABFE00CC2C68 /* AlphaButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF677C7D2628ABFE00CC2C68 /* AlphaButtons.swift */; };
+		CF677C842628AEDC00CC2C68 /* ToolTipPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF677C822628AEDC00CC2C68 /* ToolTipPopover.swift */; };
+		CF677C852628AEDC00CC2C68 /* ToolTipPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF677C832628AEDC00CC2C68 /* ToolTipPopover.xib */; };
+		CF982DB62628746D0056401A /* MLCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF982DB52628746C0056401A /* MLCalendarView.xib */; };
+		CF982DC0262874700056401A /* MLCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982DBA262874700056401A /* MLCalendarView.swift */; };
+		CF982DC1262874700056401A /* MLCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982DBF262874700056401A /* MLCalendarCell.swift */; };
+		CF982DC2262874700056401A /* MLCalendarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982DBE262874700056401A /* MLCalendarBackground.swift */; };
+		CF982DD0262890860056401A /* TerminalPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982DCE262890850056401A /* TerminalPopover.swift */; };
+		CF982DD1262890860056401A /* TerminalPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF982DCF262890850056401A /* TerminalPopover.xib */; };
+		CF982E102628A72C0056401A /* GoogleSearchPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982E0E2628A72C0056401A /* GoogleSearchPopover.swift */; };
+		CFBD01192629A0E900F2E7FC /* FavouriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD01182629A0E900F2E7FC /* FavouriteItem.swift */; };
+		CFBD011E2629A38C00F2E7FC /* favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD011D2629A38C00F2E7FC /* favourites.swift */; };
+		CFE6B1F526285EBC00DF229B /* InternalBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6B1F426285EBC00DF229B /* InternalBattery.swift */; };
+		CFE6B1FD26285EDA00DF229B /* InternalFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6B1FC26285EDA00DF229B /* InternalFinder.swift */; };
+		CFE6B203262864C700DF229B /* BatteryPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6B201262864C700DF229B /* BatteryPopoverView.swift */; };
+		CFE6B204262864C700DF229B /* BatteryPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE6B202262864C700DF229B /* BatteryPopoverView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +68,30 @@
 		CF537882262752040039108D /* QuickBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF537886262752040039108D /* QuickBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBarUITests.swift; sourceTree = "<group>"; };
 		CF537888262752040039108D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF537897262756130039108D /* DockWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockWindowController.swift; sourceTree = "<group>"; };
+		CF537898262756130039108D /* DockWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DockWindowController.xib; sourceTree = "<group>"; };
+		CF5378A726275A1E0039108D /* CollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewItem.swift; sourceTree = "<group>"; };
+		CF5378A826275A1E0039108D /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		CF5378A926275A1E0039108D /* CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
+		CF5378AA26275A1F0039108D /* CollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewItem.xib; sourceTree = "<group>"; };
+		CF677C732628A8A600CC2C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GoogleSearchPopover.xib; sourceTree = "<group>"; };
+		CF677C782628AB2100CC2C68 /* HoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoverButton.swift; sourceTree = "<group>"; };
+		CF677C7D2628ABFE00CC2C68 /* AlphaButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaButtons.swift; sourceTree = "<group>"; };
+		CF677C822628AEDC00CC2C68 /* ToolTipPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipPopover.swift; sourceTree = "<group>"; };
+		CF677C832628AEDC00CC2C68 /* ToolTipPopover.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolTipPopover.xib; sourceTree = "<group>"; };
+		CF982DB52628746C0056401A /* MLCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLCalendarView.xib; sourceTree = "<group>"; };
+		CF982DBA262874700056401A /* MLCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCalendarView.swift; sourceTree = "<group>"; };
+		CF982DBE262874700056401A /* MLCalendarBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCalendarBackground.swift; sourceTree = "<group>"; };
+		CF982DBF262874700056401A /* MLCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCalendarCell.swift; sourceTree = "<group>"; };
+		CF982DCE262890850056401A /* TerminalPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminalPopover.swift; sourceTree = "<group>"; };
+		CF982DCF262890850056401A /* TerminalPopover.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TerminalPopover.xib; sourceTree = "<group>"; };
+		CF982E0E2628A72C0056401A /* GoogleSearchPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSearchPopover.swift; sourceTree = "<group>"; };
+		CFBD01182629A0E900F2E7FC /* FavouriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteItem.swift; sourceTree = "<group>"; };
+		CFBD011D2629A38C00F2E7FC /* favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favourites.swift; sourceTree = "<group>"; };
+		CFE6B1F426285EBC00DF229B /* InternalBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalBattery.swift; sourceTree = "<group>"; };
+		CFE6B1FC26285EDA00DF229B /* InternalFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalFinder.swift; sourceTree = "<group>"; };
+		CFE6B201262864C700DF229B /* BatteryPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryPopoverView.swift; sourceTree = "<group>"; };
+		CFE6B202262864C700DF229B /* BatteryPopoverView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BatteryPopoverView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +142,20 @@
 		CF537869262752020039108D /* QuickBar */ = {
 			isa = PBXGroup;
 			children = (
+				CFBD01172629A0D600F2E7FC /* Favourite */,
+				CF982E0A2628A5670056401A /* WindowControllers */,
+				CF982E092628A5470056401A /* Popovers */,
 				CF53786A262752020039108D /* AppDelegate.swift */,
 				CF53786C262752030039108D /* Assets.xcassets */,
 				CF53786E262752030039108D /* MainMenu.xib */,
 				CF537871262752030039108D /* Info.plist */,
 				CF537872262752030039108D /* QuickBar.entitlements */,
+				CF5378A826275A1E0039108D /* CollectionViewController.swift */,
+				CF5378A926275A1E0039108D /* CollectionViewController.xib */,
+				CF5378A726275A1E0039108D /* CollectionViewItem.swift */,
+				CF5378AA26275A1F0039108D /* CollectionViewItem.xib */,
+				CF677C782628AB2100CC2C68 /* HoverButton.swift */,
+				CF677C7D2628ABFE00CC2C68 /* AlphaButtons.swift */,
 			);
 			path = QuickBar;
 			sourceTree = "<group>";
@@ -119,6 +176,53 @@
 				CF537888262752040039108D /* Info.plist */,
 			);
 			path = QuickBarUITests;
+			sourceTree = "<group>";
+		};
+		CF982DB42628745F0056401A /* MLCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				CF982DBE262874700056401A /* MLCalendarBackground.swift */,
+				CF982DBF262874700056401A /* MLCalendarCell.swift */,
+				CF982DBA262874700056401A /* MLCalendarView.swift */,
+				CF982DB52628746C0056401A /* MLCalendarView.xib */,
+			);
+			path = MLCalendar;
+			sourceTree = "<group>";
+		};
+		CF982E092628A5470056401A /* Popovers */ = {
+			isa = PBXGroup;
+			children = (
+				CF982DB42628745F0056401A /* MLCalendar */,
+				CFE6B1F426285EBC00DF229B /* InternalBattery.swift */,
+				CFE6B1FC26285EDA00DF229B /* InternalFinder.swift */,
+				CFE6B201262864C700DF229B /* BatteryPopoverView.swift */,
+				CFE6B202262864C700DF229B /* BatteryPopoverView.xib */,
+				CF982DCE262890850056401A /* TerminalPopover.swift */,
+				CF982DCF262890850056401A /* TerminalPopover.xib */,
+				CF982E0E2628A72C0056401A /* GoogleSearchPopover.swift */,
+				CF677C742628A8A600CC2C68 /* GoogleSearchPopover.xib */,
+				CF677C822628AEDC00CC2C68 /* ToolTipPopover.swift */,
+				CF677C832628AEDC00CC2C68 /* ToolTipPopover.xib */,
+			);
+			path = Popovers;
+			sourceTree = "<group>";
+		};
+		CF982E0A2628A5670056401A /* WindowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF537897262756130039108D /* DockWindowController.swift */,
+				CF537898262756130039108D /* DockWindowController.xib */,
+			);
+			path = WindowControllers;
+			sourceTree = "<group>";
+		};
+		CFBD01172629A0D600F2E7FC /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				CFBD01182629A0E900F2E7FC /* FavouriteItem.swift */,
+				CFBD011D2629A38C00F2E7FC /* favourites.swift */,
+			);
+			path = Favourite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +328,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF982DB62628746D0056401A /* MLCalendarView.xib in Resources */,
+				CF53789A262756130039108D /* DockWindowController.xib in Resources */,
+				CF5378AD26275A1F0039108D /* CollectionViewController.xib in Resources */,
+				CF982DD1262890860056401A /* TerminalPopover.xib in Resources */,
+				CFE6B204262864C700DF229B /* BatteryPopoverView.xib in Resources */,
+				CF677C852628AEDC00CC2C68 /* ToolTipPopover.xib in Resources */,
 				CF53786D262752030039108D /* Assets.xcassets in Resources */,
 				CF537870262752030039108D /* MainMenu.xib in Resources */,
+				CF5378AE26275A1F0039108D /* CollectionViewItem.xib in Resources */,
+				CF677C722628A8A600CC2C68 /* GoogleSearchPopover.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +362,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF982DD0262890860056401A /* TerminalPopover.swift in Sources */,
+				CF677C792628AB2100CC2C68 /* HoverButton.swift in Sources */,
+				CFBD01192629A0E900F2E7FC /* FavouriteItem.swift in Sources */,
+				CFE6B1F526285EBC00DF229B /* InternalBattery.swift in Sources */,
+				CF5378AB26275A1F0039108D /* CollectionViewItem.swift in Sources */,
+				CF982DC2262874700056401A /* MLCalendarBackground.swift in Sources */,
+				CFE6B1FD26285EDA00DF229B /* InternalFinder.swift in Sources */,
+				CF537899262756130039108D /* DockWindowController.swift in Sources */,
+				CF982E102628A72C0056401A /* GoogleSearchPopover.swift in Sources */,
 				CF53786B262752020039108D /* AppDelegate.swift in Sources */,
+				CF982DC0262874700056401A /* MLCalendarView.swift in Sources */,
+				CF5378AC26275A1F0039108D /* CollectionViewController.swift in Sources */,
+				CF982DC1262874700056401A /* MLCalendarCell.swift in Sources */,
+				CFBD011E2629A38C00F2E7FC /* favourites.swift in Sources */,
+				CF677C842628AEDC00CC2C68 /* ToolTipPopover.swift in Sources */,
+				CF677C7E2628ABFE00CC2C68 /* AlphaButtons.swift in Sources */,
+				CFE6B203262864C700DF229B /* BatteryPopoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +420,14 @@
 				CF53786F262752030039108D /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CF677C742628A8A600CC2C68 /* GoogleSearchPopover.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF677C732628A8A600CC2C68 /* Base */,
+			);
+			name = GoogleSearchPopover.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

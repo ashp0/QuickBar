@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DockWindowController" customModule="QuickBar" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="R4N-XM-QU3" id="4fl-sU-doN"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="QuickBar" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="R4N-XM-QU3">
+            <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" ignoresCycle="YES" fullScreenPrimary="YES" fullScreenDisallowsTiling="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="1300" height="40"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="775"/>
+            <view key="contentView" id="tD0-JQ-AoX">
+                <rect key="frame" x="0.0" y="0.0" width="1300" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="cjS-fY-1jf">
+                        <rect key="frame" x="0.0" y="-1.5" width="40.5" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Cf2-Te-qwp"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="N3P-EX-8Wa">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6g-kh-obP">
+                        <rect key="frame" x="40" y="0.0" width="1260" height="40"/>
+                        <clipView key="contentView" id="gTc-SZ-YKA">
+                            <rect key="frame" x="1" y="1" width="1258" height="38"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <collectionView id="mNh-bY-l7l">
+                                    <rect key="frame" x="0.0" y="0.0" width="1258" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="FTK-MW-Tqk">
+                                        <size key="itemSize" width="50" height="50"/>
+                                    </collectionViewFlowLayout>
+                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </collectionView>
+                            </subviews>
+                        </clipView>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="KwI-Ny-BR8"/>
+                        </constraints>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="SQk-8S-CeT">
+                            <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="H7N-Bq-lJX">
+                            <rect key="frame" x="1243" y="1" width="16" height="38"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cjS-fY-1jf" secondAttribute="bottom" id="NI4-p2-XDF"/>
+                    <constraint firstItem="k6g-kh-obP" firstAttribute="leading" secondItem="cjS-fY-1jf" secondAttribute="trailing" id="V8E-CL-Da0"/>
+                    <constraint firstItem="cjS-fY-1jf" firstAttribute="top" secondItem="tD0-JQ-AoX" secondAttribute="top" id="dYs-TW-e9I"/>
+                    <constraint firstAttribute="bottom" secondItem="k6g-kh-obP" secondAttribute="bottom" id="oJR-Ld-zJp"/>
+                    <constraint firstAttribute="trailing" secondItem="k6g-kh-obP" secondAttribute="trailing" id="p2a-Rl-mhz"/>
+                    <constraint firstItem="cjS-fY-1jf" firstAttribute="leading" secondItem="tD0-JQ-AoX" secondAttribute="leading" id="tCW-WZ-nwG"/>
+                    <constraint firstItem="k6g-kh-obP" firstAttribute="top" secondItem="tD0-JQ-AoX" secondAttribute="top" id="tu2-hu-mB5"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="351.5" y="572.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="NSAddTemplate" width="14" height="13"/>
+    </resources>
+</document>
