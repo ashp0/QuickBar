@@ -12,6 +12,8 @@ class HoverButton: NSButton {
     let popover = NSPopover()
 var isFave = false
     var positioningView: NSView?
+    var apps = [AppItem]()
+
     override func mouseEntered(with event: NSEvent) {
         if isFave == false {
         let apps = favourites.RunItems
@@ -26,8 +28,10 @@ var isFave = false
         popover.show(relativeTo: self.bounds, of: positioningView!, preferredEdge: .minY)
         positioningView?.frame = NSMakeRect(0, -200, 10, 10)
         } else {
-            let apps = favourites.FavItems
+
+           
             let viewController = ToolTipPopover(nibName: "ToolTipPopover", bundle: nil)
+            print(self.tag)
             viewController.appName = apps[self.tag].name
             popover.contentViewController = viewController
             popover.animates = false
@@ -47,7 +51,12 @@ var isFave = false
 
     override func updateTrackingAreas() {
         super.updateTrackingAreas()
-
+        if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
+                apps = loadedPerson
+            }
+        }
         if let trackingArea = self.trackingArea {
             self.removeTrackingArea(trackingArea)
         }

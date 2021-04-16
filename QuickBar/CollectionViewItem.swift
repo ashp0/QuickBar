@@ -16,8 +16,9 @@ class CollectionViewItem: NSCollectionViewItem {
     weak var delegate: CollectionViewController?
 
     @IBOutlet weak var mainButton: HoverButton!
+    var appssss = [AppItem]()
+
     @IBAction func appIconClicked(_ sender: NSButton) {
-        
         if isFave == false {
         let apps = favourites.RunItems
         let config = NSWorkspace.OpenConfiguration()
@@ -25,7 +26,7 @@ class CollectionViewItem: NSCollectionViewItem {
         } else {
             let config = NSWorkspace.OpenConfiguration()
 
-            NSWorkspace.shared.openApplication(at: favourites.FavItems[mainButton.tag].path, configuration: config, completionHandler: nil)
+            NSWorkspace.shared.openApplication(at: appssss[mainButton.tag].path, configuration: config, completionHandler: nil)
 
         }
         /*
@@ -35,7 +36,7 @@ class CollectionViewItem: NSCollectionViewItem {
     override func rightMouseDown(with event: NSEvent) {
         let menu = NSMenu()
 //        menu.addItem(withTitle: "Quit", action: #selector(rightClickMenuQuit), keyEquivalent: "qcmd")
-        let menuItem = NSMenuItem(title: "Hide", action: #selector(rightClickMenuHide), keyEquivalent: "hcmd")
+        let menuItem = NSMenuItem(title: "Quit QuickBar", action: #selector(rightClickMenuHide), keyEquivalent: "hcmd")
         let menuItem2 = NSMenuItem(title: "Add To Favourites", action: #selector(rightClickMenuFav), keyEquivalent: "fcmd")
 
         //
@@ -54,9 +55,11 @@ class CollectionViewItem: NSCollectionViewItem {
 
     @objc func rightClickMenuHide() {
         // Hide the application
+        exit(0)
     }
+    let apps = favourites.RunItems
+
     @objc func rightClickMenuFav() {
-        let apps = favourites.RunItems
 //        item?.appIcon?.image = apps[indexPath.item].icon
         favourites.FavItems.append(AppItem(name: apps[mainButton.tag].name, icon:apps[mainButton.tag].icon, path: apps[mainButton.tag].path))
         favourites.RunItems.remove(at: mainButton.tag)
@@ -76,6 +79,12 @@ class CollectionViewItem: NSCollectionViewItem {
     }
     }
     override func viewDidLoad() {
+        if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
+               appssss = loadedPerson
+            }
+        }
     }
     
 }

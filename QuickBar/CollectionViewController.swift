@@ -64,8 +64,57 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
         }
     }
     var asdfasdfsadfasdf = [AppItem]()
+    private var monitor: Any?
+
+    func addCloseOnOutsideClick(ignoring ignoringViews: [NSView]? = nil) {
+        monitor = NSEvent.addLocalMonitorForEvents(matching: NSEvent.EventTypeMask.leftMouseDown) { (event) -> NSEvent? in
+            if !self.view.frame.contains(event.locationInWindow) && self.view.isHidden == false {
+                
+                // If the click is in any of the specified views to ignore, don't hide
+                for ignoreView in ignoringViews ?? [NSView]() {
+                    let frameInWindow: NSRect = ignoreView.convert(ignoreView.bounds, to: nil)
+                    if frameInWindow.contains(event.locationInWindow) {
+                        // Abort if clicking in an ignored view
+                        return event
+                    }
+                }
+                
+                // Getting here means the click should hide the view
+                // Perform your hiding code here
+                self.view.isHidden = true
+            }
+            return event
+        }
+    }
+    lazy var window: NSWindow = self.view.window!
+        var mouseLocation: NSPoint { NSEvent.mouseLocation }
+        var location: NSPoint { window.mouseLocationOutsideOfEventStream }
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSEvent.addGlobalMonitorForEvents(matching: [.mouseMoved]) { [self] _ in
+            if self.mouseLocation.x < 1300 && self.mouseLocation.y < 60 {
+                        window.makeKeyAndOrderFront(nil)
+                let newFrame = CGRect(x: 0, y: 0, width: window.frame.size.width, height: window.frame.size.height)
+                     NSAnimationContext.runAnimationGroup({ (context) in
+                        context.duration = 0.50
+
+                         window.animator().setFrame(newFrame, display: true, animate: true)
+                     }, completionHandler: {
+                     })
+                    } else {
+//
+                        let newFrame = CGRect(x: 0, y: -1000, width: window.frame.size.width, height: window.frame.size.height)
+
+                             NSAnimationContext.runAnimationGroup({ (context) in
+                                context.duration = 0.75
+
+                                 window.animator().setFrame(newFrame, display: true, animate: true)
+                             }, completionHandler: {
+                             })
+                    }
+                }
+        
+        addCloseOnOutsideClick()
         //Adds transparency to the app
         view.window?.isOpaque = false
         view.window?.alphaValue = 0.98 //you can remove this line but it adds a nice effect to it
@@ -74,6 +123,7 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
             if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
                 asdfasdfsadfasdf = loadedPerson
                 favourites.FavItems.append(contentsOf: asdfasdfsadfasdf)
+                favourites.FavItems = asdfasdfsadfasdf
             }
         }
         let blurView = NSVisualEffectView(frame: view.bounds)
