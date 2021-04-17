@@ -38,16 +38,20 @@ class CollectionViewItem: NSCollectionViewItem {
 //        menu.addItem(withTitle: "Quit", action: #selector(rightClickMenuQuit), keyEquivalent: "qcmd")
         let menuItem = NSMenuItem(title: "Quit QuickBar", action: #selector(rightClickMenuHide), keyEquivalent: "hcmd")
         let menuItem2 = NSMenuItem(title: "Add To Favourites", action: #selector(rightClickMenuFav), keyEquivalent: "fcmd")
+        let menuItem3 = NSMenuItem(title: "Remove From Favourites", action: #selector(rightClickMenuUnFav), keyEquivalent: "Fcmd")
 
         //
 
         menuItem.target = self
         menuItem2.target = self
+        menuItem3.target = self
 
 //        validateMenuItem(menuItem: menuItem)
         menu.addItem(menuItem)
         menu.addItem(menuItem2)
-        let p = NSPoint(x: mainButton.frame.origin.x, y: mainButton.frame.origin.y - (mainButton.frame.height / 2))
+        menu.addItem(menuItem3)
+
+        let p = NSPoint(x: mainButton.frame.origin.x, y: mainButton.frame.origin.y)
        
         menu.popUp(positioning: nil, at: p, in: mainButton)
         
@@ -58,25 +62,54 @@ class CollectionViewItem: NSCollectionViewItem {
         exit(0)
     }
     let apps = favourites.RunItems
+    var newArray = [AppItem]()
 
     @objc func rightClickMenuFav() {
-//        item?.appIcon?.image = apps[indexPath.item].icon
-        favourites.FavItems.append(AppItem(name: apps[mainButton.tag].name, icon:apps[mainButton.tag].icon, path: apps[mainButton.tag].path))
-        favourites.RunItems.remove(at: mainButton.tag)
-        
-        collectionView?.reloadData()
-        let collectVC = superclass?.superclass() as? CollectionViewController
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { timer in
-            collectVC?.favCollectionView.reloadData()
+        print("Added1")
+        if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
+            let decoder = JSONDecoder()
+            print("Added1")
+            if var loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
+                print("Added2")
+                print("Added3")
+                newArray = loadedPerson
+                print("Added4")
+                newArray.append(AppItem(name: apps[mainButton.tag].name, icon:apps[mainButton.tag].icon, path: apps[mainButton.tag].path))
+                print("Added5")
+                favourites.RunItems.remove(at: mainButton.tag)
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(newArray) {
+                    let defaults = UserDefaults.standard
+                    defaults.set(encoded, forKey: "SavedPerson")
+            }
+            }
+            print("Added")
         }
-//        UserDefaults.standard.set(try? PropertyListEncoder().encode(favourites.FavItems), forKey:"favItemFavourites")
-//        UserDefaults.standard.set(object: favourites.FavItems, forKey: "favItemFavourites")
-//        UserDefaults.standard.setValue(favourites.FavItems, forKey: "favItemFavourites")
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(favourites.FavItems) {
-            let defaults = UserDefaults.standard
-            defaults.set(encoded, forKey: "SavedPerson")
+        collectionView?.reloadData()
     }
+    @objc func rightClickMenuUnFav() {
+        print("Added1")
+        if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
+            let decoder = JSONDecoder()
+            print("Added1")
+            if var loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
+                print("Added2")
+                print("Added3")
+                newArray = loadedPerson
+                print("Added4")
+                print(mainButton.tag)
+                favourites.RunItems.append(AppItem(name: loadedPerson[mainButton.tag].name, icon:loadedPerson[mainButton.tag].icon, path: loadedPerson[mainButton.tag].path))
+                print("Added5")
+                newArray.remove(at: mainButton.tag)
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(newArray) {
+                    let defaults = UserDefaults.standard
+                    defaults.set(encoded, forKey: "SavedPerson")
+            }
+            }
+            print("Added")
+        }
+        collectionView?.reloadData()
     }
     override func viewDidLoad() {
         if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {

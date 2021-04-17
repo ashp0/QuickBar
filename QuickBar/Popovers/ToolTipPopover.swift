@@ -15,6 +15,8 @@ var appName = "Safari"
         super.viewDidLoad()
         // Do view setup here.
         appNameLabel.stringValue = appName
+//        self.view.layer?.backgroundColor = .white
+        
     }
     
 }

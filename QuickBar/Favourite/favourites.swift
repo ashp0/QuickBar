@@ -8,23 +8,26 @@
 import Cocoa
 
 struct favourites {
-    static var FavItems = [AppItem]() {
-        didSet {
-            let observers: [MyElementObserver] = []
-                   print("FavItems Array has been modified")
-                        for observer in observers {
-                            observer.didChangeProperty(element: self.FavItems)
-                        }               }
-    }
+    // The favourite Application List
+//    static var FavItems = [AppItem]() {
+//        didSet {
+//            let observers: [MyElementObserver] = []
+//            print("FavItems Array has been modified")
+//            for observer in observers {
+//                            observer.didChangeProperty(element: self.FavItems)
+//            }
+//        }
+//    }
+    // The current running applications
     static var RunItems = [AppItem]() {
         didSet {
             let observers: [MyElementObserver] = []
-                   print("RunItems Array has been modified")
-                        for observer in observers {
-                            observer.didChangeProperty(element: self.RunItems)
-                        }               }
+            print("RunItems Array has been modified")
+            for observer in observers {
+                observer.didChangeProperty(element: self.RunItems)
+            }
+        }
     }
-
 }
 protocol MyElementObserver {
     func didChangeProperty(element: [AppItem])

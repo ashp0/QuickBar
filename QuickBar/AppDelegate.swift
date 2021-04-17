@@ -14,9 +14,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-
-        window.showWindow(nil)
         // Insert code here to initialize your application
+        window.showWindow(nil)
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

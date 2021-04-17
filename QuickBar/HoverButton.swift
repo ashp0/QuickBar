@@ -18,6 +18,8 @@ var isFave = false
         if isFave == false {
         let apps = favourites.RunItems
         let viewController = ToolTipPopover(nibName: "ToolTipPopover", bundle: nil)
+      
+//            viewController.view.frame.width =
             viewController.appName = apps[self.tag].name
         popover.contentViewController = viewController
         popover.animates = false
@@ -28,10 +30,8 @@ var isFave = false
         popover.show(relativeTo: self.bounds, of: positioningView!, preferredEdge: .minY)
         positioningView?.frame = NSMakeRect(0, -200, 10, 10)
         } else {
-
-           
             let viewController = ToolTipPopover(nibName: "ToolTipPopover", bundle: nil)
-            print(self.tag)
+//            print(self.tag)
             viewController.appName = apps[self.tag].name
             popover.contentViewController = viewController
             popover.animates = false

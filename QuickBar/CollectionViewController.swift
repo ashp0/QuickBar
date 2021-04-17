@@ -122,8 +122,6 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
             let decoder = JSONDecoder()
             if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
                 asdfasdfsadfasdf = loadedPerson
-                favourites.FavItems.append(contentsOf: asdfasdfsadfasdf)
-                favourites.FavItems = asdfasdfsadfasdf
             }
         }
         let blurView = NSVisualEffectView(frame: view.bounds)
@@ -140,100 +138,11 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
             }
         }
         
-        favourites.FavItems = UserDefaults.standard.object(forKey: "favItemFavourites") as? [AppItem] ?? items
         popover.delegate = self
         runningAppsCollectionView.register(CollectionViewItem.self, forItemWithIdentifier: CollectionViewItem.reuseIdentifier)
         favCollectionView.register(CollectionViewItem.self, forItemWithIdentifier: CollectionViewItem.reuseIdentifier)
         let apps = NSWorkspace.shared.runningApplications.filter{  $0.activationPolicy == .regular }
-        
-//        favourites.FavItems = (defaults.object(forKey: "favItemFavourites") as? [AppItem] ?? items)
-//        for app in apps {
-////            for fave in favourites.FavItems {
-//
-//                    favourites.RunItems.append(AppItem(name: app.localizedName!, icon: app.icon!.tiffRepresentation!, path: app.bundleURL!))
-//
-////            }
-//        }
-//        for a in 0...(apps.count-1) {
-//            favourites.RunItems.append(AppItem(name: apps[a].localizedName!, icon: apps[a].icon!.tiffRepresentation!, path: apps[a].bundleURL!))
-//        }
-//        for numb in apps {
-//            for n in 0...5 {
-//
-//            }
-//            var items = [AppItem]()
-//            items.append(AppItem(name: numb.localizedName!, icon: (numb.icon?.tiffRepresentation)!, path: numb.bundleURL!))
-//
-//
-//        }
-//            if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
-//                let decoder = JSONDecoder()
-//                if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
-//                    for n in 0...(apps.count-1) {
-//
-//                        for a in 0...(loadedPerson.count-1) {
-//                            if apps[n].localizedName == loadedPerson[a].name {
-//                                print("DUPLICATE FOUND\n")
-//                                print("----Running Application: \(apps[n].localizedName),")
-//                                print("\n----Favourite Application: \(loadedPerson[a].name)")
-//                            } else {
-//                            favourites.RunItems.append(AppItem(name: apps[n].localizedName!, icon: apps[n].icon!.tiffRepresentation!, path: apps[n].bundleURL!))
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
-//            let decoder = JSONDecoder()
-//            if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
-////                if apps.count < loadedPerson.count{
-//
-////                } else {
-//                if apps.count > loadedPerson.count {
-//                for n in 0...apps.count-1 {
-//
-//                        if apps[n] == loadedPerson[n] {
-//                            print("DUPLICATE FOUND\n")
-//                            print("----Running Application: \(apps[n].localizedName),")
-//                            print("\n----Favourite Application: \(loadedPerson[n].name)")
-//                        } else {
-//                            for a in 0...apps.count-1 {
-//                        favourites.RunItems.append(AppItem(name: apps[a].localizedName!, icon: apps[a].icon!.tiffRepresentation!, path: apps[a].bundleURL!))
-//                        }
-//                        }
-//                    }
-////                }
-//            }
-//            }
-//        }
-       
-        if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
-            let decoder = JSONDecoder()
-            if var loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
-                var faveNameArray = [String]()
-                var appNameArray = [String]()
-                
-                for Favname in loadedPerson {faveNameArray.append(Favname.path.absoluteString);faveNameArray.sort()}
-                for app in apps {appNameArray.append(app.bundleURL!.absoluteString);appNameArray.sort()}
-                let differences = appNameArray.difference(from: faveNameArray)
-                print(differences)
-                for difference in differences {
-//                    NSWorkspace.shared.
-                    let image = NSWorkspace.shared.icon(forFile: URL(string: difference)!.path)
-                    let appBundle = Bundle(path: URL(string: difference)!.path)
-                    print()
-                    favourites.RunItems.append(AppItem(name: (appBundle?.infoDictionary![kCFBundleNameKey as String] as? String)!, icon: image.tiffRepresentation!, path: URL(string: difference)!))
-            }
-            
-            }
-        }
-            
-            
-//                    let found = favourites.FavItems.filter{$0.name == app.localizedName}.count > 0
-//                    print(favourites.FavItems.filter{$0.name == app.localizedName})
-//                    print(found)
-                
-        
+      
         runningAppsCollectionView.delegate = self
         runningAppsCollectionView.dataSource = self
         favCollectionView.delegate = self
@@ -243,9 +152,29 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
                             object: nil, // always NSWorkspace
                             queue: OperationQueue.main) { [self] (notification: Notification) in
                                 if let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
+                                    if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
+                                        let decoder = JSONDecoder()
+                                        if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
+                                            var name1 = [String]()
+                                            var name2 = String()
+                                            
+                                            for load in loadedPerson {name1.append(load.name)}
+                                            
+                                            name2 = app.localizedName!
+                                            if name1.contains(name2) {
+                                                print("found lol")
+                                            } else {
+                                                print("found lol2")
+                                                favourites.RunItems.append(AppItem(name: app.localizedName!, icon: (app.icon?.tiffRepresentation)!, path: app.bundleURL!))
+                                                runningAppsCollectionView.reloadData()
+                                                favCollectionView.reloadData()
+                                            }
+
+                                        }
+                                    }
 //                                        (collectionView.item(at: 3) as? CollectionViewItem)?.view.layer?.backgroundColor = .black
                                     
-                                    favourites.RunItems.append(AppItem(name: app.localizedName!, icon: (app.icon?.tiffRepresentation)!, path: app.bundleURL!))
+//
 
                                         runningAppsCollectionView.reloadData()
                                         favCollectionView.reloadData()
@@ -254,25 +183,28 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
         }
         self.setUp()
 
-        Timer.scheduledTimer(withTimeInterval: 60.0, repeats: true) { [self] timer in
+        Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [self] timer in
             self.setUp()
-            defaults.setValue(favourites.FavItems, forKey: "favItemFavourites")
-            
+            favCollectionView.reloadData()
+            runningAppsCollectionView.reloadData()
         }
 //        let center1 = NSWorkspace.shared.notificationCenter
         center.addObserver(forName: NSWorkspace.didTerminateApplicationNotification,
                             object: nil, // always NSWorkspace
                              queue: OperationQueue.main) { (notification: Notification) in
                                 if let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
+                                    if favourites.RunItems.isEmpty != true {
                                     for n in 0...favourites.RunItems.count-1 {
                                         if favourites.RunItems[n].name == app.localizedName {
                                             print("Found Name")
                                             favourites.RunItems.remove(at: n)
+                                            self.runningAppsCollectionView.reloadData()
+                                            self.favCollectionView.reloadData()
                                         }
                                     }
 
-                                    self.runningAppsCollectionView.reloadData()
-                                    self.favCollectionView.reloadData()
+                                    
+                                    }
                                 }
         }
         
