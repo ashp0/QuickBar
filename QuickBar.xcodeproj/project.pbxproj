@@ -23,6 +23,7 @@
 		CF677C7E2628ABFE00CC2C68 /* AlphaButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF677C7D2628ABFE00CC2C68 /* AlphaButtons.swift */; };
 		CF677C842628AEDC00CC2C68 /* ToolTipPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF677C822628AEDC00CC2C68 /* ToolTipPopover.swift */; };
 		CF677C852628AEDC00CC2C68 /* ToolTipPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF677C832628AEDC00CC2C68 /* ToolTipPopover.xib */; };
+		CF838835262CA24F00D95EC3 /* QuickBar.icns in Resources */ = {isa = PBXBuildFile; fileRef = CF838834262CA24F00D95EC3 /* QuickBar.icns */; };
 		CF982DB62628746D0056401A /* MLCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF982DB52628746C0056401A /* MLCalendarView.xib */; };
 		CF982DC0262874700056401A /* MLCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982DBA262874700056401A /* MLCalendarView.swift */; };
 		CF982DC1262874700056401A /* MLCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF982DBF262874700056401A /* MLCalendarCell.swift */; };
@@ -79,6 +80,7 @@
 		CF677C7D2628ABFE00CC2C68 /* AlphaButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaButtons.swift; sourceTree = "<group>"; };
 		CF677C822628AEDC00CC2C68 /* ToolTipPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolTipPopover.swift; sourceTree = "<group>"; };
 		CF677C832628AEDC00CC2C68 /* ToolTipPopover.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToolTipPopover.xib; sourceTree = "<group>"; };
+		CF838834262CA24F00D95EC3 /* QuickBar.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = QuickBar.icns; sourceTree = "<group>"; };
 		CF982DB52628746C0056401A /* MLCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLCalendarView.xib; sourceTree = "<group>"; };
 		CF982DBA262874700056401A /* MLCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCalendarView.swift; sourceTree = "<group>"; };
 		CF982DBE262874700056401A /* MLCalendarBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCalendarBackground.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				CF982E0A2628A5670056401A /* WindowControllers */,
 				CF982E092628A5470056401A /* Popovers */,
 				CF53786A262752020039108D /* AppDelegate.swift */,
+				CF838834262CA24F00D95EC3 /* QuickBar.icns */,
 				CF53786C262752030039108D /* Assets.xcassets */,
 				CF53786E262752030039108D /* MainMenu.xib */,
 				CF537871262752030039108D /* Info.plist */,
@@ -328,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF838835262CA24F00D95EC3 /* QuickBar.icns in Resources */,
 				CF982DB62628746D0056401A /* MLCalendarView.xib in Resources */,
 				CF53789A262756130039108D /* DockWindowController.xib in Resources */,
 				CF5378AD26275A1F0039108D /* CollectionViewController.xib in Resources */,

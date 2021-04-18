@@ -91,6 +91,47 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
         var location: NSPoint { window.mouseLocationOutsideOfEventStream }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserDefaults.standard.object(forKey: "SavedPerson") == nil {
+            print("yo")
+            let encoder = JSONEncoder()
+            let newArray = [AppItem]()
+            if let encoded = try? encoder.encode(newArray) {
+                let defaults = UserDefaults.standard
+                defaults.set(encoded, forKey: "SavedPerson")
+        }
+        }
+        let apps = NSWorkspace.shared.runningApplications.filter{  $0.activationPolicy == .regular }
+
+        for app in apps {
+            if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
+                let decoder = JSONDecoder()
+                if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {
+                    var name1 = [String]()
+                    var name2 = String()
+                    
+                    for load in loadedPerson {name1.append(load.name)}
+                    
+                    name2 = app.localizedName!
+                    if name1.contains(name2) {
+                        print("found lol")
+                    } else {
+                        print("found lol2")
+                        favourites.RunItems.append(AppItem(name: app.localizedName!, icon: (app.icon?.tiffRepresentation)!, path: app.bundleURL!))
+                        runningAppsCollectionView.reloadData()
+                        favCollectionView.reloadData()
+                    }
+
+                }
+            }
+//                                        (collectionView.item(at: 3) as? CollectionViewItem)?.view.layer?.backgroundColor = .black
+            
+//
+
+                runningAppsCollectionView.reloadData()
+                favCollectionView.reloadData()
+            
+        
+        }
         NSEvent.addGlobalMonitorForEvents(matching: [.mouseMoved]) { [self] _ in
             if self.mouseLocation.x < 1300 && self.mouseLocation.y < 60 {
                         window.makeKeyAndOrderFront(nil)
@@ -141,17 +182,17 @@ class CollectionViewController: NSViewController, NSPopoverDelegate, MyElementOb
         popover.delegate = self
         runningAppsCollectionView.register(CollectionViewItem.self, forItemWithIdentifier: CollectionViewItem.reuseIdentifier)
         favCollectionView.register(CollectionViewItem.self, forItemWithIdentifier: CollectionViewItem.reuseIdentifier)
-        let apps = NSWorkspace.shared.runningApplications.filter{  $0.activationPolicy == .regular }
       
         runningAppsCollectionView.delegate = self
         runningAppsCollectionView.dataSource = self
         favCollectionView.delegate = self
         favCollectionView.dataSource = self
         let center = NSWorkspace.shared.notificationCenter
-        center.addObserver(forName: NSWorkspace.willLaunchApplicationNotification,
+        center.addObserver(forName: NSWorkspace.didLaunchApplicationNotification,
                             object: nil, // always NSWorkspace
                             queue: OperationQueue.main) { [self] (notification: Notification) in
                                 if let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
+                                    
                                     if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
                                         let decoder = JSONDecoder()
                                         if let loadedPerson = try? decoder.decode([AppItem].self, from: savedPerson) {

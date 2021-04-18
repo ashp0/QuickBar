@@ -86,6 +86,13 @@ class CollectionViewItem: NSCollectionViewItem {
             print("Added")
         }
         collectionView?.reloadData()
+        let url = URL(fileURLWithPath: Bundle.main.resourcePath!)
+        let path = url.deletingLastPathComponent().deletingLastPathComponent().absoluteString
+        let task = Process()
+        task.launchPath = "/usr/bin/open"
+        task.arguments = [path]
+        task.launch()
+        exit(0)
     }
     @objc func rightClickMenuUnFav() {
         print("Added1")
@@ -107,9 +114,37 @@ class CollectionViewItem: NSCollectionViewItem {
                     defaults.set(encoded, forKey: "SavedPerson")
             }
             }
+            print(isFullScreen())
             print("Added")
         }
+        
         collectionView?.reloadData()
+        let url = URL(fileURLWithPath: Bundle.main.resourcePath!)
+        let path = url.deletingLastPathComponent().deletingLastPathComponent().absoluteString
+        let task = Process()
+        task.launchPath = "/usr/bin/open"
+        task.arguments = [path]
+        task.launch()
+        exit(0)
+    }
+    func isFullScreen() -> Bool
+    {
+        guard let windows = CGWindowListCopyWindowInfo(.optionOnScreenOnly, kCGNullWindowID) else {
+            return false
+        }
+
+        for window in windows as NSArray
+        {
+            guard let winInfo = window as? NSDictionary else { continue }
+            
+            if winInfo["kCGWindowOwnerName"] as? String == "Dock",
+               winInfo["kCGWindowName"] as? String == "Fullscreen Backdrop"
+            {
+                return true
+            }
+        }
+        
+        return false
     }
     override func viewDidLoad() {
         if let savedPerson = UserDefaults.standard.object(forKey: "SavedPerson") as? Data {
