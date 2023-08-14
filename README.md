@@ -1,4 +1,5 @@
 # QuickBar
+> Project no longer in development
 An attempt to create a custom Dock for Mac
 
 # Images
