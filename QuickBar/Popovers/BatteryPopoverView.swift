@@ -41,7 +41,7 @@ class BatteryPopoverView: NSViewController {
         if let internalBattery = internalFinder.getInternalBattery() {
             timeToFull.stringValue = "\(Int(internalBattery.timeToFull!))"
             timeToEmpty.stringValue = "\(Int(internalBattery.timeToEmpty!))"
-            manufacturer.stringValue = internalBattery.manufacturer!
+            manufacturer.stringValue = internalBattery.manufacturer ?? "---"
             
             
             
