@@ -1,6 +1,5 @@
-
-# QuickBar2
-Replacement for macOS Dock
+# QuickBar
+An attempt to create a custom Dock for Mac
 
 # Images
 <img width="1300" alt="Screenshot 2023-08-13 at 7 49 50 PM" src="https://github.com/ashp0/QuickBar/assets/62433766/2e7ac7d6-50c4-4f9e-a026-306d27e54ac7">
